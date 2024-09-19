@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset box model and remove default margin/padding */
+* {
+  @apply box-border m-0 p-0;
+}
+
+body {
+  @apply bg-[#f4f4f9] h-screen flex justify-center items-start; /* Change items-center to items-start */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.centered-header {
+  @apply w-[1200px] h-[90px] absolute -translate-x-2/4 top-[10px] flex justify-between items-start gap-[60px] bg-[rgb(214,214,214,0.4)] opacity-100 px-6 py-5 rounded-[35px_35px_35px_35px] left-2/4;
+  /* Changed translate-y-[-250%] to top-[10px] to move it closer to the top */
+}
+
+/* Navbar styling using Tailwind CSS */
+.navbar {
+  @apply flex justify-between items-center w-full px-4 py-2;
+}
+
+.logo {
+  @apply flex items-center justify-start;
+}
+
+.nav-links {
+  @apply flex items-center text-black list-none; /* Adjusted for general layout */
+}
+
+.nav-links li {
+  @apply flex items-center mx-6; /* Spacing between each link */
+}
+
+.nav-links a {
+  @apply no-underline text-black transition-colors duration-300 px-3 py-2 hover:rounded hover:text-white hover:bg-gray-700;
+}
+
+/* Specific styling for the search bar */
+.search-bar {
+  @apply ml-auto; /* Positions the search bar to the far right */
+  /* You can add additional custom styles here */
+}
+
+/* Specific styling for the account button */
+.account-button {
+  @apply ml-6; /* Adjust this value to position the Account button as desired */
+  /* Add any specific margin, padding, or other layout tweaks needed */
+}
+
+/* Burger menu for mobile responsiveness */
+.burger {
+  @apply flex md:hidden flex-col justify-around w-6 h-6 cursor-pointer;
+}
+
+.burger div {
+  @apply w-full h-[2px] bg-black;
+}
+
+.dropdown {
+  @apply relative;
+}
+
+.dropdown-content {
+  @apply hidden absolute bg-[#444] min-w-[150px] shadow-[0_8px_16px_rgba(0,0,0,0.2)] z-[1] rounded-[5px];
+}
+
+.dropdown-content a {
+  @apply block text-white no-underline px-4 py-3;
+}
+
+.dropdown:hover .dropdown-content {
+  @apply block;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    @apply hidden flex-col w-full absolute bg-[#333] left-0 top-[90px];
+  }
+
+  .nav-links li {
+    @apply text-center mx-0 my-[15px];
+  }
+
+  .burger {
+    @apply flex;
+  }
+
+  .nav-links.active {
+    @apply flex;
+  }
+}
+
+.cloud-container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.cloud {
+  position: absolute;
+  width: 295px;
+  height: 256px;
+}
+
+.cloud0 {
+  top: 83%;
+  left: -250px;
+}
+
+.cloud3 {
+  top: 0;
+  left: -10px;
+}
+
+.cloud1 {
+  top: 0;
+  left: 65%;
+}
+
+.cloud2 {
+  top: 83%;
+  left: 600px;
+}
+
+.arrow {
+  position: absolute;
+  width: 295px;
+  height: 146px;
+}
+
+.arrow1 {
+  margin-top: -22rem;
+  margin-left: -45rem;
+  transform: rotate(-50deg);
+}
+
+.arrow4 {
+  margin-top: -33rem;
+  margin-left: 3.8rem;
+}
+
+.arrow5 {
+  margin-top: -25rem;
+  margin-left: 54.8rem;
+  transform: rotate(-310deg);
+}
+
+.girl {
+  position: absolute;
+  margin-top: -17rem;
+  margin-left: 67rem;
+}
+
+.bulb {
+  position: absolute;
+  margin-top: -16rem;
+  margin-left: -55rem;
+  transform: rotate(-6deg);
+}
+
+.coin {
+  position: absolute;
+  margin-top: -21rem;
+  margin-left: 37rem;
+}
+
+.one {
+  position: absolute;
+  top: 10.5rem;
+  left: 22.8rem;
+}
+
+.zero {
+  position: absolute;
+  top: 27rem;
+  left: 65rem;
+}
+
+.dollar {
+  position: absolute;
+  margin-top: -479px;
+  margin-left: 451px;
+}
+
+.Yay {
+  position: absolute;
+  margin-top: -17.5rem;
+  margin-left: 66rem;
+}
+
+.first {
+  position: absolute;
+  margin-top: -9rem;
+  margin-left: -49rem;
+  color: rgba(0, 60, 60, 1);
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.second {
+  position: absolute;
+  margin-top: -26rem;
+  margin-left: -20rem;
+  color: rgba(0, 60, 60, 1);
+  font-size: 24px;
+}
+
+.partofsecond .second {
+  font-weight: 300;
+}
+
+.Influencers {
+  font-weight: 700;
+}
+
+.India {
+  font-weight: 700;
+}
+
+.third {
+  position: absolute;
+  margin-top: -25rem;
+  margin-left: 29rem;
+  font-size: 25px;
+  color: rgba(0, 60, 60, 1);
+  font-weight: 700;
+}
+
+.fourth {
+  position: absolute;
+  margin-top: -8.5rem;
+  margin-left: 56rem;
+  font-size: 21px;
+  color: rgba(0, 60, 60, 1);
+}
+
+.small-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adjust margin as needed */
+}
+
+.small-bar {
+  width: 1200px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Custom shadow effect */
+  border-radius: 50px; /* Adjust radius for curved effect */
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items to the top */
+  padding-top: 4rem; /* Adjust as needed */
+}
+
+.bar-content {
+  margin-top: -18px; /* Adjust upwards */
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.bar-body {
+  margin-top: 120px;
+  margin-left: -21rem;
+}
+
+.text-4x1 {
+  margin-left: -30px;
+}
+.bodytext {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: -16.3rem;
+  margin-top: 9rem;
+}
+
+.bar-background {
+  width: 1350px;
+  height: 610px;
+  background-color: rgba(229, 240, 241, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Headingbar {
+  font-size: 1.56rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5rem;
+  margin-right: 10rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+.Subheading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 7.5rem;
+  margin-right: 5rem;
+  margin-left: 1rem;
+  margin-top: -4.5rem;
+}
+.tutorial-gallery {
+  display: flex; /* Display items in a row */
+  flex-direction: row; /* Arrange items in a row */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between line and images */
+  padding: 20px; /* Add some padding around the container */
+  position: relative; /* Set relative positioning for overall control */
+}
+
+.line-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.line-image {
+  width: 140px; /* Set width */
+  height: 200px; /* Adjust height to make the line shorter */
+}
+
+.images-container {
+  display: flex; /* Display images in a column */
+  flex-direction: column;
+  gap: 20px; /* Space between images */
+  position: relative; /* For relative positioning of the images */
+}
+
+.image-wrapper {
+  position: relative; /* Allows for fine-tuning of each image */
+  left: 40px; /* Default positioning */
+}
+
+/* Fine-tune individual images if needed */
+.image-wrapper:nth-child(1) {
+  top: -500px; /* Adjust position for Image 1 */
+  left: 700px;
+}
+
+.image-wrapper:nth-child(2) {
+  top: -350px; /* Adjust position for Image 2 */
+  left: 700px;
+}
+
+.image-wrapper:nth-child(3) {
+  top: -200px; /* Adjust position for Image 3 */
+  left: 700px;
+}
+
+.image-wrapper:nth-child(4) {
+  top: -50px; /* Adjust position for Image 4 */
+  left: 700px;
+}
+
+/* globals.css */
+.estimate-earning-text {
+  color: #003c3c;
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* Adjust this value as needed */
+  margin-left: 30rem; /* Default position; adjust as needed */
+  font-family: "Urbanist", sans-serif;
+}
+
+/* 
+.backend-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  background-color: rgba(229, 240, 241, 1);
+  bottom: 400px;
+}
+
+.backend-bar {
+  width: 1200px;
+  height: 300px;
+  top: 300px;
+} */
+
+/* globals.css */
+
+/* Container for the entire tutorial gallery */
+/* globals.css */
+
+/* Container for the entire tutorial gallery */
+.tutorial-gallery {
+  position: relative; /* Ensures absolute positioning within this container */
+}
+
+/* Styling and positioning for the new image */
+.new-image-container {
+  position: absolute; /* Allows for precise positioning */
+  right: 650px; /* Move the image towards the right */
+  top: -475px; /* Move the image upwards */
+  width: 79.5px; /* Set the width of the new image */
+  height: var(
+    50px
+  ); /* Set a very small height with a CSS variable for easy manipulation */
+  overflow: hidden; /* Ensure any overflow is clipped */
+}
